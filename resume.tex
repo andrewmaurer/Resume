@@ -14,7 +14,7 @@
 \documentclass[10pt,a4paper]{article}
 
 % Set the page margins.
-\usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage[a4paper,margin=0.5in]{geometry}
 
 % Setup the language.
 \usepackage[english]{babel}
@@ -24,6 +24,17 @@
 \usepackage{resume}
 \usepackage{graphicx}
 \usepackage{tabto}
+\usepackage{qrcode}
+
+
+
+\usepackage{hyperref}
+\hypersetup{
+pdftitle={Andrew Maurer's Resum\'e},
+pdfsubject={Job Application},
+pdfauthor={Andrew Maurer},
+pdfkeywords={job-application, data-science, mathematics}
+}
 
 %\usepackage{draftwatermark}
 
@@ -35,6 +46,7 @@
 }
 
 \begin{document}  % begin the content of the document
+
 \sloppy  % this to relax whitespacing in favour of straight margins
 
 
@@ -45,30 +57,30 @@
 
 \spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
 
-\roottitle{Contact Info}
-
+%\roottitle{Contact Info}
+\vspace{0.3in}
 \noindent
-Boyd Graduate Research Studies\tabto{7cm} \url{http://andrewmaurer.github.io} \\
-Department of Mathematics \tabto{7cm} \href{mailto:andrew.b.maurer@gmail.com}{\texttt{andrew.b.maurer@gmail.com}} \\
+Boyd Graduate Research Studies\tabto{9.4cm} \url{http://andrewmaurer.github.io} \\
+Department of Mathematics \tabto{9.4cm} \href{mailto:andrew.b.maurer@gmail.com}{\texttt{andrew.b.maurer@gmail.com}} \\
 Athens, Georgia, 30602 \ \\
-\tabto{14.5cm}\includegraphics[scale=.5]{qr.png}\\
+\vspace{-0.4in}
+\tabto{16.9cm}
+% \includegraphics[scale=.5]{qr.png}\\
+{\qrset{height=1.5cm} \qrset{nolink}  \qrcode{https://andrewmaurer.github.io\?END:VCARD}
+\\
 
-\spacedhrule{-.5em}{-.4em}
+\spacedhrule{1em}{-.4em}
 
 \roottitle{Summary}  % a root section title
 
-\vspace{-1.3em}  % some vertical spacing
-\begin{multicols}{2}  % open a multicolumn environment
-\noindent \emph{Motivated and independent mathematician with broad interests in technical fields looking for a \textbf{Summer 2017 internship} involving data, statistical inference, and communication.}
-
-\textbullet~\textit{Mathematical research experience.} Participated in mathematical research since summer 2012. Strong programming and technical skills.
-
-\textbullet~\textit{Degrees.} Mathematics BS, computer science minor (2014). Ph.D. in mathematics (expected 2019). Coursework toward statistics MS (started 2017).
-\\
-\indent~\textbullet \textit{Teaching.} Many semesters as primary TA and lecturer for fundamental math courses. Developed ability to communicate technical concepts clearly.
-\end{multicols}
-
-\spacedhrule{0em}{-.04em}
+% \vspace{1.3em}  % some vertical spacing
+\vspace{-1em}
+\noindent
+\begin{center}
+  \parbox{5.3in}{\emph{Motivated and independent mathematician with broad interests in technical fields looking for employment in the data science industry following completion of his Ph.D. in May 2019.}}
+\end{center}
+  
+\spacedhrule{0.5em}{-.04em}
 
 \roottitle{Education}
 
@@ -77,8 +89,9 @@ Athens, Georgia, 30602 \ \\
   {\textsc{Athens, Georgia}} {%
   \headedsubsection
     {Mathematics, Ph.D.}
-    {Expected 2019}
-    {\bodytext{Thesis title: Finite Generation of Relative Cohomology for Lie Superalgebras. \\Advisor: Daniel K. Nakano.}}
+    {2019}
+    {\bodytext{Thesis title: Finite Generation of Relative Cohomology for Lie Superalgebras.\\
+      Advisor: Daniel Nakano}}
 }
 
 \headedsection
@@ -88,20 +101,27 @@ Athens, Georgia, 30602 \ \\
     {Mathematics, Bachelor of Science. Computer Science, Minor.}
     {2014}
     {\bodytext{Senior Project: Computational and theoretical study of Hasse-Witt invariants of Jacobi polynomials.\\
-      Advisor: Farshid Hajir.}}
+        Advisor: Farshid Hajir.
+      }}
 }
-
 \spacedhrule{0.5em}{-0.4em}
 
 \roottitle{Skills}
 
 \begin{itemize}
-  \item \textbf{Programming:} \textit{General Programming:} Python, Java. \textit{Mathematical Programming:} Sage, GP/Pari. \textit{Statistical Programming:} R, SciPy stack. \textit{Deep Learning Frameworks:} Fast.AI, TensorFlow.
-  \item \textbf{Software:} \textit{Operating Systems:} GNU/Linux, Windows, Mac OS. \textit{Scripting:} Bash. \textit{Version control:} Git. \textit{Document preparation:} \LaTeX, org-mode, HTML, markdown.
+  \item \textbf{Programming:} \textit{Deep Learning Frameworks:} PyTorch, Fast.AI, TensorFlow. \textit{Statistical Programming:} R, SciPy stack. \textit{General Programming:} Python, Java. \textit{Mathematical Programming:} Sage, GP/Pari. 
+  \item \textbf{Software:} \textit{Operating Systems:} GNU/Linux, Windows, Mac OS. \textit{Scripting:} Bash, Python. \textit{Version control:} Git. \textit{Document preparation:} \LaTeX, org-mode, HTML, markdown.
 %  \item \textbf{Teaching:} Fundamental understanding of basic notions, highly effective communication, very pointed and specific feedback.
 %  \item \textbf{Research:} Expertise in the mathematical discipline of support varieties. Able to read technical papers and ask meaningful questions. Mathematical software is a cornerstone of research.
-   \item \textbf{Mathematics:} Linear algebra, calculus, real analysis, algorithms, formal language theory, data structures, statistical regression, nonparametric data analysis, machine learning, deep learning, abstract algebra, complex analysis, algebraic number theory.
+   \item \textbf{Mathematics:} Linear algebra, calculus, real analysis, algorithms, formal language theory, data structures, statistical regression, nonparametric data analysis, machine learning, deep learning, abstract algebra, complex analysis, algebraic number theory, representation theory, Lie superalgebras, homological algebra.
    \item \textbf{General:} Public speaking, mathematics education, college teaching, workshop facilitation.
+ \end{itemize}
+
+\spacedhrule{0.5em}{-0.4em}
+ 
+\roottitle{Publications}
+\begin{itemize}
+\item Maurer, A. ``\emph{On the Finite Generation of Relative Cohomology For Lie Superalgebras}.'' Proceedings of the American Mathematical Society ({to appear}). \hfill (preprint: \url{https://arxiv.org/abs/1711.02112})
 \end{itemize}
 
 
@@ -109,13 +129,31 @@ Athens, Georgia, 30602 \ \\
 
 \roottitle{Experience}
 \begin{itemize}
-  \item \textbf{Research:} Extensive research in algebra and representation theory. REU in Summer 2012 on asymptotic problems in coding theory, graph theory, and number theory. Senior project on inverse Galois theory. Independent project on tropical Grassmannians and tropical GIT.
-\item \textbf{Organizer:} President of our \emph{Chapter of the American Mathematical Society} (2015 -- present), organizer of \emph{S.M.A.R.T.S.} seminar, co-organizer of Southeast Lie Theory Workshop, co-organizer of Graduate Student Summer Program.
-\item \textbf{Teaching:} \emph{Instructor of record:} Pre-Calculus, Mathematics of Decision Making, Upward Bound SAT Math. \emph{Teaching Assistant:} Linear algebra, Introduction to proofs, Differential calclulus, Integral calculus, Foundations of geometry, Abstract algebra.
-\item \textbf{Logistic Assistance:} Tuesday algebraic geometry seminar (2014), Graduate student visitation day (2015, 2016), Summer workshop in Algebraic Geometry (2016), Topological Aspects of Algebra and Arithmetic Geometry (2016).
-\item \textbf{Presentations:} Many presentations on mathematical disciplines such as cryptography, coding theory, theory of computation, support varieties for Lie superalgebras, and geometric complexity theory. Professional website building in Wordpress. 
+\item \textbf{Research:} Single-author publication in respected journal. Extensive research in algebra and representation theory. REU in Summer 2012 on asymptotic problems in coding theory, graph theory, and number theory.
+  %Senior project on inverse Galois theory. Independent project on tropical Grassmannians.
+  %Extensive experience explaining research-level mathematics to varying levels of audience.
+\item \textbf{Organizer:} -- Co-organizer of Graduate Student Summer Program \& Conference (2018, 6 \href{https://research.franklin.uga.edu/agant/professional-development-summer-2018}{workshops}, $\sim$40 \href{https://research.franklin.uga.edu/agant/mock-ams-conference-2018}{talks}),
+  \\ \null \hspace{1em} -- President of UGA's \emph{Chapter of the American Mathematical Society} (2015--17, $\sim$50 members),
+  \\ \null \hspace{1em} -- Co-founder / co-organizer of weekly \emph{S.M.A.R.T.S.} seminar (2017--18, $\sim$25 participants),
+  \\ \null \hspace{1em} -- Co-organizer of \href{https://www.math.lsu.edu/~pramod/selie/10/}{Southeast Lie Theory Workshop} (2018, $\sim$35 talks, $\sim$150 domestic and international participants).
+\item \textbf{Teaching:} \emph{Instructor of record:} Calculus, Pre-Calculus, Mathematics of Decision Making, Upward Bound SAT Math. \emph{Teaching Assistant:} Linear Algebra, Introduction to Proofs, Differential Calculus, Integral Calculus, Foundations of Geometry, Abstract Algebra.
+%\item \textbf{Logistic Assistance:} Tuesday algebraic geometry seminar (2014), Graduate student visitation day (2015, 2016, 2018), Summer workshop in Algebraic Geometry (2016), Topological Aspects of Algebra and Arithmetic Geometry (2016).
+\item \textbf{Selected Presentations:}
+  \\ \null  -- \emph{On the Finite Generation of Relative Cohomology for Lie Superalgebras} (Algebra Seminar, audience: research specialists),
+  \\ \null \hspace{0em} --\emph{Generative Adversarial Networks}, (Graduate Student Seminar, audience: senior graduate students),
+  \\ \null \hspace{0em} -- \emph{Statistics For Mathematicians} (SMARTS Seminar, audience: junior math graduate students),
+  \\ \null \hspace{0em} -- \emph{Coloring Graphs on Surfaces} (Week-long Math Camp, audience: high school students).
+
+  %Many presentations on mathematical disciplines such as cryptography, coding theory, theory of computation, support varieties for Lie superalgebras, and geometric complexity theory. Professional website building in Wordpress, building presentations in Beamer. Panelist for workshop on advice to graduate school hopefuls.
 \end{itemize}
 
+% \spacedhrule{0.5em}{-0.4em}
+
+% \roottitle{References}
+% \null \hspace{1em} Available upon request.
+
+
+   
 \end{document}
 
 %%% Local Variables:
