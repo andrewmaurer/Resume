@@ -11,10 +11,10 @@
 
 
 % Start a document with the here given default font size and paper size.
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt]{article}
 
 % Set the page margins.
-\usepackage[a4paper,margin=0.5in]{geometry}
+\usepackage[margin=0.2in]{geometry}
 
 % Setup the language.
 \usepackage[english]{babel}
@@ -64,7 +64,7 @@ pdfkeywords={job-application, data-science, mathematics}
 ~ \tabto{9.4cm} ~
 
 \vspace{-0.4in}
-\tabto{16.9cm}
+\tabto{18.9cm}
 % \includegraphics[scale=.5]{qr.png}\\
 {\qrset{height=1.5cm} \qrset{nolink}  \qrcode{https://andrewmaurer.github.io\?END:VCARD}
 \\
@@ -93,7 +93,7 @@ pdfkeywords={job-application, data-science, mathematics}
 
 \spacedhrule{0.5em}{-0.4em}
 
-\roottitle{Additional Education}
+\roottitle{Professional Training}
 
 \begin{itemize}
   \item \textbf{Insight Data Science} \hfill \textsc{Seattle, WA} \\
@@ -101,7 +101,7 @@ pdfkeywords={job-application, data-science, mathematics}
 
         \vspace{-1em}
   \parbox[H]{15cm}{ 
-        Post-Ph.D. fellowship focused on producing projects and preparing for a career in data science. Conceived of, designed, and built web-app \emph{Permitted} (see \emph{Data Science Projects} below).
+        Post-Ph.D. fellowship focused on producing projects and preparing for a career in data science. Conceived of, designed, and built web-app \emph{Data-Driven} (see \emph{Data Science Projects} below).
         }
 \end{itemize}
 
@@ -110,7 +110,7 @@ pdfkeywords={job-application, data-science, mathematics}
 \roottitle{Skills}
 
 \begin{itemize}
-  \item \textbf{Programming:} \textit{Deep Learning Frameworks:} PyTorch, Fast.AI, TensorFlow. \textit{Statistical Programming:} R, SciPy stack. \textit{General Programming:} Python, Java. \textit{Mathematical Programming:} Sage, GP/Pari. 
+  \item \textbf{Programming:} \textit{Deep Learning Frameworks:} PyTorch, Fast.AI. \textit{Statistical Programming:} R, SciPy stack. \textit{General Programming:} Python, Java. \textit{Mathematical Programming:} Sage, GP/Pari. 
   \item \textbf{Software:} \textit{Operating Systems:} GNU/Linux, Windows, Mac OS. \textit{Scripting:} Bash, Python. \textit{Version control:} Git. \textit{Document preparation:} \LaTeX, org-mode, HTML, markdown.
 %  \item \textbf{Teaching:} Fundamental understanding of basic notions, highly effective communication, very pointed and specific feedback.
 %  \item \textbf{Research:} Expertise in the mathematical discipline of support varieties. Able to read technical papers and ask meaningful questions. Mathematical software is a cornerstone of research.
@@ -122,11 +122,12 @@ pdfkeywords={job-application, data-science, mathematics}
 
 \roottitle{Data Science Projects}
 \begin{itemize}
-  \item \textbf{Permitted} \emph{(Insight Data Science Project)}: A web app which predicts safe times to drive, allowing teens to practice driving in progressively more difficult conditions.
+  \item \textbf{Data-Driven} \emph{(Insight Data Science Project)}: Predicts safe times and locations to drive, allowing teens to practice driving in progressively more difficult conditions.
+  
   \begin{itemize}
-    \item Utilized data from over 200,000 traffic collisions in Seattle between 2014 and 2019.
+    \item Utilized data from over 200,000 traffic collisions in Seattle between 2004 and 2019.
     \item Generated on-the-fly visualizations using GIS.
-    \item Modeled using one-class support vector machines and $k$-nearest neighbor classifiers.
+    \item Modeled using one-class support vector machines and kernel density estimation.
     \item Deployed web-app using Flask and Amazon Web Services.
   \end{itemize} 
 \end{itemize}
